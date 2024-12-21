@@ -1,0 +1,44 @@
+/* Testimonials Section */
+.testimonials {
+  background: linear-gradient(to right, #6c171f, #248c91); /* Same as body background */
+  color: white; /* Ensure text is visible against the gradient */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly translucent white background */
+  color: #333; /* Ensure text is readable on the card */
+  padding: 20px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+  color: #007bff;
+}
+
+.hospital-name {
+  font-family: 'Georgia', serif; /* Choose a stylish font, or include a web font */
+  font-size: 36px; /* Make it larger for prominence */
+  font-weight: bold; /* Bold text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for a stylish effect */
+  color: #ffffff; /* White color for visibility */
+  margin-left: 20px;
+}
+.testimonial-card h3 {
+  font-style: italic;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #003366;">
+  <div class="container-fluid">
+    <!-- Hospital Name -->
+    <a class="navbar-brand" href="#" style="color: #ffffff; font-size: 28px; font-weight: bold;">Apollo Hospital</a>
+
+    <!-- Toggler for responsive menu -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- Ensures the items are pushed to the right -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/create-appointment" style="color: #ffffff; font-size: 16px;">Add Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin" style="color: #ffffff; font-size: 16px;">Back</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Admin Dashboard Heading -->
+<div class="text-center admin-dashboard-heading" style="margin-top: 20px;">
+  <h2 style="font-size: 32px; color: #003366; text-transform: uppercase;">Appointments</h2>
+</div>
+
+<!-- Moving Text -->
+<marquee class="moving-text" style="font-size: 18px; font-weight: bold; color: #003366; background-color: #f8f9fa; padding: 10px 0;">
+  Welcome to Apollo Hospital ! Book the appointments online today.
+</marquee>
+
+<!-- Patient List Heading -->
+<div class="text-center patient-list-heading" style="margin-top: 30px;">
+  <h3 style="color: #003366; font-size: 24px; text-decoration: underline;">Patient List</h3>
+</div>
+
+<!-- Appointment Table -->
+<div class="container mt-4">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="background-color: #003366; color: #ffffff; text-align: center;">ID</th>
+        <th style="background-color: #003366; color: #ffffff; text-align: center;">Name</th>
+        <th style="background-color: #003366; color: #ffffff; text-align: center;">Age</th>
+        <th style="background-color: #003366; color: #ffffff; text-align: center;">Symptoms</th>
+        <th style="background-color: #003366; color: #ffffff; text-align: center;">Number</th>
+        <th style="background-color: #003366; color: #ffffff; text-align: center;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <td style="text-align: center;">{{appointment.id}}</td>
+        <td style="text-align: center;">{{appointment.name}}</td>
+        <td style="text-align: center;">{{appointment.age}}</td>
+        <td style="text-align: center;">{{appointment.symptomps}}</td>
+        <td style="text-align: center;">{{appointment.number}}</td>
+        <td style="text-align: center;">
+          <button (click)="delete(appointment.id)" class="btn btn-danger" style="font-size: 14px; padding: 5px 10px;">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
